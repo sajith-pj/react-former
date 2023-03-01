@@ -1,7 +1,10 @@
+
 ##Introduction
+
 This package will helps you to deals with the forms in React JS. Its will helps you to create forms, validate the forms and to deal with the form submission. This package will take array and return the curresponding form
 
 ##Usage
+
 To auotmate the code or to reduce the efforts in the implimentation of forms in React JS.
 
 ## Installation
