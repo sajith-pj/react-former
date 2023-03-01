@@ -1,9 +1,9 @@
 
-##Introduction
+# Introduction
 
 This package will helps you to deals with the forms in React JS. Its will helps you to create forms, validate the forms and to deal with the form submission. This package will take array and return the curresponding form
 
-##Usage
+## Usage
 
 To auotmate the code or to reduce the efforts in the implimentation of forms in React JS.
 
@@ -34,7 +34,7 @@ An input will have three parts 1.Label(`<Label>`), 2.input(`<input/>`) and a wra
 | validationSchema | This is an object to set your validation. We expect a Yup object for validation                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | submit           | This is an object which helps you to deal with form submission.This object contains <ul> <li>**onBeforeSubmit**: This function will run before the api call</li> <li>**onAfterApiSuccess**: This function will run after the api response is success</li> <li>**onAfterApiFail**: This function will run after the api fails</li> <li>**body**: This could be an array or an function that defines the body of the api request </li> <li>**method**:This key will help you to define the http method</li> </ul> |
 
-##Examples
+## Examples
 A simple example will save your minutes
 
 ```js
