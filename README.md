@@ -1,4 +1,3 @@
-
 # Introduction
 
 This package will helps you to deals with the forms in React JS. Its will helps you to create forms, validate the forms and to deal with the form submission. This package will take array and return the curresponding form
@@ -35,13 +34,13 @@ An input will have three parts 1.Label(`<Label>`), 2.input(`<input/>`) and a wra
 | submit           | This is an object which helps you to deal with form submission.This object contains <ul> <li>**onBeforeSubmit**: This function will run before the api call</li> <li>**onAfterApiSuccess**: This function will run after the api response is success</li> <li>**onAfterApiFail**: This function will run after the api fails</li> <li>**body**: This could be an array or an function that defines the body of the api request </li> <li>**method**:This key will help you to define the http method</li> </ul> |
 
 ## Examples
+
 A simple example will save your minutes
 
 ```js
-import * as Yup from "yup";
-import From from '@sajith-pj/react-former';
-const App = () => {
-    const let form = {
+//  formConfig.js
+
+   const let form = {
         // Each object of template array will generate
         // <div> => container object
         // <label>Example Label</label> => label object
@@ -121,10 +120,79 @@ const App = () => {
                 // if body is array
                 body: ["username", "password"],
             }
-            }
+        }
+export { form }
+
+```
+
+```js
+import * as Yup from "yup";
+import Form, { config } from "react-former-package";
+import config from "./axiosConfig";
+import { form } from "./formConfig"
+
+config(config);  //=> config function will expect a object with key axios, eg: { axios: axiosInstance }
+const App = () => {
+
     return(
         <Form {...form}>
     )
 }
 
+```
+
+## Config
+
+We are using **axios** to make api calls, so you can config the axios instance using this config function. Its is expected to be called in the entry point of your app (index.js in React JS).
+
+```js
+// axiosConfig.js.
+// you can seperate the axios config.
+import axios from "axios";
+
+// axios instance for making requests
+const axiosInstance = axios.create();
+// request interceptor for adding token
+axiosInstance.interceptors.request.use((config) => {
+  // add token to request headers
+  config.baseURL = `https://your-base-url/api`;
+  config.headers = Object.assign(
+    {
+      Authorization: `${localStorage.getItem("accessToken")}`,
+    },
+    config.headers
+  );
+  //   ... rest of your config.
+  return config;
+});
+
+axiosInstance.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+
+const config = { axios: axiosInstance };
+export default config;
+```
+
+```js
+import React from "react";
+import Form, { config } from "react-former-package";
+import { form } from "./formConfig"
+import config from "./axiosConfig";
+
+config(config); //=> config function will expect a object with key axios, eg: { axios: axiosInstance }
+function App() {
+  return (
+    <div className="App">
+      <Form {...form} />
+    </div>
+  );
+}
+
+export default App;
 ```
