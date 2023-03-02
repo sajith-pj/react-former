@@ -1,6 +1,6 @@
 {
   "name": "@sajith-pj/react-former",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -17,26 +17,15 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/react-dom": "^18.0.11",
-    "assert": "^2.0.0",
-    "browserify-url": "^0.0.1",
-    "buffer": "^6.0.3",
     "classnames": "^2.3.2",
-    "constants-browserify": "^1.0.0",
     "formik": "^2.2.9",
     "fs": "^0.0.1-security",
-    "fs-extra": "^11.1.0",
-    "lilconfig": "^2.0.6",
     "module": "^1.2.5",
-    "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
     "react-app-rewired": "^2.2.1",
     "react-scripts": "^5.0.1",
     "rollup-plugin-node-globals": "^1.4.0",
     "sass": "^1.58.3",
-    "stream-browserify": "^3.0.0",
-    "url": "^0.11.0",
-    "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -52,9 +41,9 @@
     "sass-loader": "^13.2.0"
   },
   "peerDependencies": {
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "yup": "^1.0.1",
-    "react": "^18.2.0"
+    "yup": "^1.0.1"
   },
   "eslintConfig": {
     "extends": [
@@ -73,5 +62,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/sajith-pj/react-former/issues"
+  },
+  "homepage": "https://github.com/sajith-pj/react-former#readme",
+  "keywords": [
+    "formist",
+    "forms",
+    "validation",
+    "frontend"
+  ],
+  "author": "Sajith P J",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajith-pj/react-former.git"
   }
 }
