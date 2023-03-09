@@ -46,9 +46,17 @@ const Form = ({
       if (render) {
         initialValues = { ...initialValues, ...customInputs };
       } else if (input?.type === "checkbox" || input?.type === "radio") {
-        initialValues[`${input?.name}`] = false;
+        if (input.checked !== undefined && input.checked) {
+          initialValues[`${input?.name}`] = input.checked;
+        } else {
+          initialValues[`${input?.name}`] = false;
+        }
       } else {
-        initialValues[`${input?.name}`] = "";
+        if (input.value !== undefined && input.value !== "") {
+          initialValues[`${input?.name}`] = input.value;
+        } else {
+          initialValues[`${input?.name}`] = "";
+        }
       }
     });
     return initialValues;

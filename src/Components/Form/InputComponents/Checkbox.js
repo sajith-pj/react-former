@@ -22,7 +22,7 @@ const Checkbox = ({ templateInput, errors, handleChange, values, touched }) => {
           input?.className !== "" ? input?.className : Styles["input"]
         )}
         onChange={handleChange}
-        checked={values[`${input?.name}`][0] === input.value}
+        checked={[`${input?.name}`][0] === input.value}
       />
       {label?.text !== "" && label?.text !== undefined && (
         <label
