@@ -1,11 +1,6 @@
 node_modules/
 .git/
-.next
 public
 src
-.babelrc
-.eslintrc.json
 .gitignore
-jsconfig.json
-next.config.json
 rollup.config.js

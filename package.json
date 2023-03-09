@@ -1,6 +1,6 @@
 {
   "name": "@sajith-pj/react-former",
-  "version": "0.1.2",
+  "version": "0.1.17",
   "main": "dist/index.js",
   "files": [
     "dist/"
