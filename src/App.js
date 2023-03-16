@@ -1,7 +1,8 @@
+import "./App.css";
 import Form from "./Components/Form/Form";
-import { LoginForm } from "./formConfig/settingform";
+import { LoginForm, SignupForm } from "./Components/settingform";
 function App() {
-  return <Form {...LoginForm} />;
+  return <Form  {...SignupForm}/>;
 }
 
 export default App;

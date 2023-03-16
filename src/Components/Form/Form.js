@@ -16,27 +16,6 @@ const Form = ({
 }) => {
   const [customInputs, setCustomInputs] = useState({});
 
-  // const getInitialValues = () => {
-  //   if (editData) {
-  //     let api = onEdit && onEdit.api && onEdit.api(editingData);
-  //     axios.get(`${api}`).then((response) => {
-  //       setEditFormConfig({
-  //         ...editFormConfig,
-  //         selectedData: response.data.data,
-  //       });
-  //       let initalResponse = response.data.data;
-  //       for (let key in initalResponse) {
-  //         if (
-  //           initalResponse[key] === null ||
-  //           initalResponse[key] === undefined
-  //         ) {
-  //           initalResponse[key] = "";
-  //         }
-  //       }
-  //       setInitialValuesEdit({ ...initialValuesEdit, ...response.data.data });
-  //     });
-  //   }
-  // };
 
   const getinitialValues = () => {
     let initialValues = {};
@@ -171,6 +150,7 @@ const Form = ({
     }
   };
 
+  console.log(getinitialValues());
   const formik = useFormik({
     initialValues: getinitialValues(),
     enableReinitialize: true,

@@ -14,7 +14,6 @@ export const inputProps = propTypes.shape({
   groupName: propTypes.string,
   value: (props, propName, componentName) => {
     if (props.type === "checkbox" && props.value !== "") {
-      console.log(propName + "dsasd");
       return new Error(
         `Invalid prop \`${propName}\` of type \`${typeof props[
           propName

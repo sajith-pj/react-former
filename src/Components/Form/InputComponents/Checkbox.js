@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Styles from "../form.module.scss";
 import classNames from "classnames";
 import propTypes from "prop-types";
@@ -8,6 +8,7 @@ import {
 } from "../props/InputProps";
 const Checkbox = ({ templateInput, errors, handleChange, values, touched }) => {
   const { container, input, label } = templateInput;
+
   return (
     <div
       className={classNames(
@@ -22,7 +23,7 @@ const Checkbox = ({ templateInput, errors, handleChange, values, touched }) => {
           input?.className !== "" ? input?.className : Styles["input"]
         )}
         onChange={handleChange}
-        checked={[`${input?.name}`][0] === input.value}
+        checked={values[[`${input?.name}`][0]]}
       />
       {label?.text !== "" && label?.text !== undefined && (
         <label
