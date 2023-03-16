@@ -1,7 +1,10 @@
 {
-  "name": "npmpackage",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@sajith-pj/react-former",
+  "version": "0.1.18",
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
